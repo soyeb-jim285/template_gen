@@ -1,0 +1,288 @@
+\documentclass[10pt, landscape, a4paper,twosided]{extarticle}
+
+\usepackage{minted}
+% \usemintedstyle{bw}
+\usepackage{fouriernc}
+% \usepackage{latexbangla}
+
+\usepackage[T1]{fontenc}
+\usepackage{framed}
+\usepackage{makeidx}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{verbatim}
+\usepackage{hyperref}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{multicol}
+\usepackage{geometry}
+\usepackage{amssymb,tikz,psfrag,epstopdf}
+\usepackage{polyglossia}
+\setmainlanguage[numerals=Bengali]{bengali}
+\setotherlanguage{english}
+\newfontfamily\englishfont{Times New Roman}
+\newfontfamily\bengalifont[Script=Bengali,BoldFont={Maple Mono NF Bold},ItalicFont={Maple Mono NF Italic}]{Maple Mono NF}
+\newfontfamily\bengalifontsf{Mukti}
+\geometry{verbose,landscape,a4paper,tmargin=1.25cm,bmargin=0cm,lmargin=0.75cm,rmargin=.25cm}
+
+\setlength{\parindent}{0pt}
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}%
+
+\setlength{\columnsep}{1.5mm}
+\setlength{\columnseprule}{1px}
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+\BeforeBeginEnvironment{minted}{\vspace{1mm}}
+\AfterEndEnvironment{minted}{\vspace{1mm}}
+\setmonofont[Scale=0.8]{Maple Mono NF}
+
+\newmintedfile[cpp]{C++}{
+	 frame=lines,    
+    % fontfamily=tt,
+    linenos=false,
+    numberblanklines=true,
+    numbersep=2pt,
+    gobble=0,
+    framerule=1pt,
+    framesep=1mm,
+    funcnamehighlighting=true,
+    tabsize=1,
+    obeytabs=false,
+    mathescape=false
+    samepage=false, %with this setting you can force the list to appear on the same page
+    showspaces=false,
+    showtabs =false,
+    texcl=false,
+    breaklines = true,
+    breakanywhere = true,
+}
+
+\linespread{0.50}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\theFancyVerbLine}{\sffamily \textcolor[rgb]{0.15,0.15,0.15}{\small \arabic{FancyVerbLine}}}
+\rhead{\thepage}
+\lhead{\textcolor{MidnightBlue}{\textit{\textbf{DU\_দ্বিকলন, University of Dhaka}}}}
+\setlength\headheight{16pt} 
+
+\chead{\textcolor{blue}{\textbf{Olin}} | \textcolor{blue}{\textbf{Jim}} | \textcolor{blue}{\textbf{Rifat}}}
+% \rhead{\textcolor{MidnightBlue}{\textit{\textbf{DU\_দ্বিকলন, University of Dhaka}}}}
+\headsep = 0pt
+\textheight = 7.75in
+\footskip = 16pt
+
+\titlespacing{\section}{0pt}{1.25mm}{1.25mm}
+\titlespacing{\subsection}{0pt}{1.25mm}{1.25mm}
+\titlespacing{\subsubsection}{0pt}{1.25mm}{1.25mm}
+
+\titleformat{\section}
+  {\normalfont\fontsize{10}{15}\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\fontsize{8}{15}\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+  {\normalfont\fontsize{8}{15}\bfseries}{\thesubsubsection}{1em}{}
+
+\begin{document}
+\begin{multicols}{2}
+	\tableofcontents
+\end{multicols}
+\newpage
+\begin{multicols}{3}
+%\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+\section{DP}
+\subsection{Convex Hull Trick}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/DP/Convex Hull Trick.cpp"}
+\subsection{DC\_dp}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/DP/DC_dp.cpp"}
+\subsection{DnC}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/DP/DnC.cpp"}
+\subsection{Knuth's Optomization}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/DP/Knuth's Optomization.cpp"}
+\subsection{Li Chao Tree}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/DP/Li Chao Tree.cpp"}
+\subsection{SOS DP}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/DP/SOS DP.cpp"}
+\section{Data Structures}
+\subsection{2D fenwick tree}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Data Structures/2D fenwick tree.cpp"}
+\subsection{Dsu}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Data Structures/Dsu.cpp"}
+\subsection{Fenwick\_tree}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Data Structures/Fenwick_tree.cpp"}
+\subsection{GP Hash Table}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Data Structures/GP Hash Table.cpp"}
+\subsection{LCA}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Data Structures/LCA.cpp"}
+\subsection{LIS}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Data Structures/LIS.cpp"}
+\subsection{MO\_s Algo}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Data Structures/MO_s Algo.cpp"}
+\subsection{PBDS}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Data Structures/PBDS.cpp"}
+\subsection{Persistent Segment Tree(pointer)}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Data Structures/Persistent Segment Tree(pointer).cpp"}
+\subsection{RMQ}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Data Structures/RMQ.cpp"}
+\subsection{Segment Tree (Point Update, Range Query)}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Data Structures/Segment Tree (Point Update, Range Query).cpp"}
+\subsection{Segment Tree (Range Update, Range Query)}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Data Structures/Segment Tree (Range Update, Range Query).cpp"}
+\subsection{segment tree(lazy propagation)}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Data Structures/segment tree(lazy propagation).cpp"}
+\subsection{treap}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Data Structures/treap.cpp"}
+\section{Graph}
+\subsection{Articulation Point Detection}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Graph/Articulation Point Detection.cpp"}
+\subsection{Bridge Detection}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Graph/Bridge Detection.cpp"}
+\subsection{Centroid Decomposition}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Graph/Centroid Decomposition.cpp"}
+\subsection{DSU On Tree}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Graph/DSU On Tree.cpp"}
+\subsection{Dinic}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Graph/Dinic.cpp"}
+\subsection{Heavy Light Decomposition}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Graph/Heavy Light Decomposition.cpp"}
+\subsection{Hopcroft Karp}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Graph/Hopcroft Karp.cpp"}
+\subsection{Hungarian}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Graph/Hungarian.cpp"}
+\subsection{LCA(sparse table)}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Graph/LCA(sparse table).cpp"}
+\subsection{MCMF(SPFA)}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Graph/MCMF(SPFA).cpp"}
+\subsection{MCMF(normal)}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Graph/MCMF(normal).cpp"}
+\subsection{Max\_Flow-1}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Graph/Max_Flow-1.cpp"}
+\subsection{Maximum flow - Edmonds Karp}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Graph/Maximum flow - Edmonds Karp.cpp"}
+\subsection{Online Bridge}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Graph/Online Bridge.cpp"}
+\subsection{SCC}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Graph/SCC.cpp"}
+\section{Math}
+\subsection{Algebra}
+\subsubsection{Extended\_Euclid}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Algebra/Extended_Euclid.cpp"}
+\subsubsection{Factorial mod P}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Algebra/Factorial mod P.cpp"}
+\subsubsection{Sieve upto 1e9}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Algebra/Sieve upto 1e9.cpp"}
+\subsection{Geometry}
+\subsubsection{2D Point Line \_ Segment}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Geometry/2D Point Line _ Segment.cpp"}
+\subsubsection{Circle}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Geometry/Circle.cpp"}
+\subsubsection{Closest Point Pair}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Geometry/Closest Point Pair.cpp"}
+\subsubsection{Common tengents of circle}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Geometry/Common tengents of circle.cpp"}
+\subsubsection{Convex hall}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Geometry/Convex hall.cpp"}
+\subsubsection{Half Plain Intersection}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Geometry/Half Plain Intersection.cpp"}
+\subsubsection{Point Inside Poly (Ray Shooting)}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Geometry/Point Inside Poly (Ray Shooting).cpp"}
+\subsubsection{check if belongs to convex poly}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Geometry/check if belongs to convex poly.cpp"}
+\subsection{Matrices}
+\subsubsection{Gauss-Jordan Elimination in GF(2)}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Matrices/Gauss-Jordan Elimination in GF(2).cpp"}
+\subsubsection{Gauss-Jordan Elimination in GF(P)}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Matrices/Gauss-Jordan Elimination in GF(P).cpp"}
+\subsubsection{Gauss-Jordan Elimination}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Matrices/Gauss-Jordan Elimination.cpp"}
+\subsubsection{Space of Binary Vectors}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Matrices/Space of Binary Vectors.cpp"}
+\subsubsection{matrix\_exponentiation}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Matrices/matrix_exponentiation.cpp"}
+\subsection{Modular Arithmatic}
+\subsubsection{Chinese Remainder Theorem}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Modular Arithmatic/Chinese Remainder Theorem.cpp"}
+\subsubsection{Discrete log}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Modular Arithmatic/Discrete log.cpp"}
+\subsubsection{Modular\_inverse\_EGCD}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Modular Arithmatic/Modular_inverse_EGCD.cpp"}
+\subsubsection{nCr Lucas}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Modular Arithmatic/nCr Lucas.cpp"}
+\subsection{Notes}
+\subsubsection{Counting}
+\paragraph{Fibonacci}
+\input{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Notes/Counting/Fibonacci.tex"}
+\subsubsection{Geometry}
+\paragraph{Triangle}
+\input{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Notes/Geometry/Triangle.tex"}
+\subsubsection{Chinese\_reminder\_theorem}
+\input{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Notes/Chinese_reminder_theorem.tex"}
+\subsubsection{Diophantine}
+\input{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Notes/Diophantine.tex"}
+\subsubsection{Series}
+\input{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Notes/Series.tex"}
+\subsubsection{Sum}
+\input{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Notes/Sum.tex"}
+\subsection{Polynomial Multiplication}
+\subsubsection{FFT}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Polynomial Multiplication/FFT.cpp"}
+\subsubsection{NTT}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Polynomial Multiplication/NTT.cpp"}
+\subsection{2-SAT}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/2-SAT.cpp"}
+\subsection{Catalan\_number}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Catalan_number.cpp"}
+\subsection{Diophantine\_Equation}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Diophantine_Equation.cpp"}
+\subsection{Euler\_Totient}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Euler_Totient.cpp"}
+\subsection{Extended Euclid}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Extended Euclid.cpp"}
+\subsection{Mobius Function}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Mobius Function.cpp"}
+\subsection{Primes\_stuff}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Primes_stuff.cpp"}
+\subsection{Xor basis}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/Xor basis.cpp"}
+\subsection{stirling\_number\_of\_2nd\_kind}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Math/stirling_number_of_2nd_kind.cpp"}
+\section{Misc}
+\subsection{Compilation}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Misc/Compilation.cpp"}
+\subsection{Ordered\_set}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Misc/Ordered_set.cpp"}
+\subsection{Ternary Search}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Misc/Ternary Search.cpp"}
+\subsection{brute}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/Misc/brute.cpp"}
+\section{String}
+\subsection{Aho-Corasick}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/String/Aho-Corasick.cpp"}
+\subsection{Hashing\_without\_inv}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/String/Hashing_without_inv.cpp"}
+\subsection{KMP}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/String/KMP.cpp"}
+\subsection{KMP\_full}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/String/KMP_full.cpp"}
+\subsection{Manacher}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/String/Manacher.cpp"}
+\subsection{Palindromic Tree}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/String/Palindromic Tree.cpp"}
+\subsection{String Hashing}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/String/String Hashing.cpp"}
+\subsection{Suffix Array (nlogn)}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/String/Suffix Array (nlogn).cpp"}
+\subsection{Suffix Automaton}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/String/Suffix Automaton.cpp"}
+\subsection{Trie}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/String/Trie.cpp"}
+\subsection{Z algo}
+\cpp{"/run/media/jim/stuff/codes/notebook_generator_latex-1/notebook_generator_latex/code/String/Z algo.cpp"}
+\end{multicols}
+\end{document}
